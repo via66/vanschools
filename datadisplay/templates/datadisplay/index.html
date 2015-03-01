@@ -22,7 +22,7 @@
           map = new google.maps.Map(document.getElementById('map-canvas'),
               mapOptions);
 
-          {% for school in hypo %}
+          {% for school in allschools %}
             var coord = new google.maps.LatLng({{school.latitude}}, {{school.longitude}});
             var marker = new google.maps.Marker({
               position: coord,

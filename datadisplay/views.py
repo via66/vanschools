@@ -6,6 +6,6 @@ from datadisplay.models import School
 def index(request):
 	all_schools = School.objects.all()
 	template = loader.get_template('datadisplay/index.html')
-	context = RequestContext(request, {'hypo': all_schools,
+	context = RequestContext(request, {'allschools': all_schools,
 		})
 	return HttpResponse(template.render(context))
